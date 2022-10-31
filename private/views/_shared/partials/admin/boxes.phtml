@@ -1,0 +1,6 @@
+<?php
+$boxes = (new Boxes)->all();
+?>
+<?php foreach ($boxes as $box): ?>
+    <li><a href="/admin/boxes/<?=$box->id?>"><?=$box->box_name?></a></li>
+<?php endforeach; ?>

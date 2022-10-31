@@ -1,9 +1,22 @@
 
 <aside>
     <details>
+        <summary>Pages</summary>
+        <ul>
+            <li><a href="/admin/pages">New</a></li>
+        </ul>
+    </details>
+    <details>
+        <summary>Templates</summary>
+        <ul>
+            <li><a href="/admin/templates">New</a></li>
+        </ul>
+    </details>
+    <details>
         <summary>Boxes</summary>
         <ul>
-            <li><a href="/fastbond/boxes">New</a></li>
+            <li><a href="/admin/boxes">New</a></li>
+            <?php View::partial('admin/boxes', '+1', null, "kumbia.boxes"); ?>
         </ul>
     </details>
 </aside>

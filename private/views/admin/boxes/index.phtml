@@ -1,0 +1,26 @@
+
+<?=Form::open()?>
+    <fieldset>
+        <legend>Box</legend>
+        <section>
+            <div>
+                <?=Form::label('Name:', 'boxes.box_name')?>
+                <?=Form::input('text', 'boxes.box_name')?>
+            </div>
+            <div>
+                <?=Form::label('Type:', 'boxes.box_type')?>
+                <?=Form::select('boxes.box_type', ['html'=>'HTML', 'css'=>'CSS', 'js'=>'JS'])?>
+            </div>
+        </section>
+
+        <div>
+            <?=Form::label('Code:', 'boxes.box_code')?>
+            <?=Form::textarea('boxes.box_code')?>
+        </div>
+
+        <div>
+            <?=Form::submit('Save')?>
+        </div>
+    </fieldset>
+    <?=Form::hidden('boxes.id')?>
+<?=Form::close()?>

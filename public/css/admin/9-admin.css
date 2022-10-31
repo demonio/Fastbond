@@ -1,3 +1,18 @@
+a,
+button,
+select,
+summary,
+textarea,
+[type="text"] {
+    background: #fff;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #999;
+    height: 48px;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+}
+
 a {
     color: #333;
     display: inline-block;
@@ -60,21 +75,9 @@ h6 {
     margin-top: 0;
 }
 
-a,
-button,
-summary,
-textarea,
-[type="text"] {
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px #999;
-    height: 48px;
-    margin: 0 0 10px;
-    padding: 5px 10px;
-}
-
-[type="text"]:focus-visible {
-    outline: 0 !important
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
 main {
@@ -92,5 +95,9 @@ section {
 textarea {
     height: 100px;
     max-width: 100%;
-    width: 280px;
+    width: -webkit-fill-available;
+}
+
+[type="text"]:focus-visible {
+    outline: 0 !important
 }
