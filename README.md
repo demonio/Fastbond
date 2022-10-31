@@ -1,4 +1,4 @@
-# Fastbond 0.2
+# Fastbond 0.2.1
 Box based CMS for KumbiaPHP
 
 ## Requirements
