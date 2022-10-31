@@ -1,33 +1,19 @@
 <?php
-/**
- * @see Controller nuevo controller
- */
 require_once CORE_PATH . 'kumbia/controller.php';
-
 /**
- * Controlador para proteger los controladores que heredan
- * Para empezar a crear una convención de seguridad y módulos
- *
- * Todas las controladores heredan de esta clase en un nivel superior
- * por lo tanto los métodos aquí definidos estan disponibles para
- * cualquier controlador.
- *
- * @category Kumbia
- * @package Controller
  */
 abstract class AdminController extends Controller
 {
-
     final protected function initialize()
     {
-        //Código de auth y permisos
-        //Será libre, pero añadiremos uno por defecto en breve
-        //Posiblemente se cree una clase abstracta con lo que debe tener por defecto
+        $this->clean = empty($_GET['clean']) ? false : true;
+        $this->start_time = microtime(1);
+		$this->version = '22';
+
+        Input::isAjax() ? View::template('ajax') : View::template('admin');
     }
 
     final protected function finalize()
     {
-        
     }
-
 }

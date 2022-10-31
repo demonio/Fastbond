@@ -1,0 +1,30 @@
+.gap0 {
+    gap: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs li {
+    margin: 0 5px;
+    padding: 10px;
+}
+
+.tabs li.active {
+    border: 1px solid #fff;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    background: #fff;
+}

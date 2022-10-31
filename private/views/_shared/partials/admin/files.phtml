@@ -1,0 +1,11 @@
+<?php
+$files = _fastbond::readDir("../$dir/*");
+?>
+<details>
+    <summary><?=ucfirst(basename($dir))?></summary>
+    <ul>
+        <?php foreach ($files as $file): ?>
+            <li><a href="/fastbond/files?file=<?=$file?>"><?=basename($file)?></a></li>
+        <?php endforeach; ?>
+    </ul>
+</details>

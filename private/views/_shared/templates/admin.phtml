@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fastbond</title>
+        <link href="/css/admin.min.css?v=<?=$version?>" rel="stylesheet">
+		<?=Css::inc()?>
+	</head>
+	<body>
+		<section class="gap0 nowrap">
+			<?php View::partial('admin/aside'); ?>
+
+			<main>
+				<?php View::content(); ?>
+			</main>
+		</section>
+
+		<footer>
+			<p><?=microtime(1)-$start_time?></p>
+		</footer>
+
+		<script src="/javascript/admin.min.js?v=<?=$version?>"></script>
+		<?=Js::inc()?>
+	</body>
+</html> 
