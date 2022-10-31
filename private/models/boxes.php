@@ -6,6 +6,8 @@ class Boxes extends LiteRecord
     # 1
     public function saveBox()
     {
-        parent::save(Input::post('boxes'));
+        Input::post('boxes.id')
+            ? parent::update(Input::post('boxes'))
+            : parent::create(Input::post('boxes'));
     }
 }

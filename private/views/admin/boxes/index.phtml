@@ -13,9 +13,15 @@
             </div>
         </section>
 
-        <div>
-            <?=Form::label('Code:', 'boxes.box_code')?>
-            <?=Form::textarea('boxes.box_code')?>
+        <ul class="tabs">
+            <li data-active=".tabs li" data-hide=".code_after" data-show=".code_before" class="active">Code before</li>
+            <li data-active=".tabs li" data-hide=".code_before" data-show=".code_after">Code after</li>
+        </ul>
+        <div class="code_before">
+            <?=Form::textarea('boxes.code_before')?>
+        </div>
+        <div class="code_after hide">
+            <?=Form::textarea('boxes.code_after')?>
         </div>
 
         <div>
