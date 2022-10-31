@@ -3,19 +3,19 @@
     <fieldset>
         <legend>Box</legend>
         <section>
-            <div>
-                <?=Form::label('Name:', 'boxes.box_name')?>
+            <label>
+                <div>Name:</div>
                 <?=Form::input('text', 'boxes.box_name')?>
-            </div>
-            <div>
-                <?=Form::label('Type:', 'boxes.box_type')?>
+            </label>
+            <label>
+                <div>Type:</div>
                 <?=Form::select('boxes.box_type', ['html'=>'HTML', 'css'=>'CSS', 'js'=>'JS'])?>
-            </div>
+            </label>
         </section>
 
         <ul class="tabs">
             <li data-active=".tabs li" data-hide=".code_after" data-show=".code_before" class="active">Code before</li>
-            <li data-active=".tabs li" data-hide=".code_before" data-show=".code_after">Code after</li>
+            <li data-active=".tabs li" data-hide=".code_before" data-show=".code_after">& after boxes</li>
         </ul>
         <div class="code_before">
             <?=Form::textarea('boxes.code_before')?>
@@ -25,7 +25,14 @@
         </div>
 
         <div>
-            <?=Form::submit('Save')?>
+            <?php if (empty($boxes->id)): ?>
+                <?=Form::submit('Create', 'name="action" value="create"')?>
+            <?php else: ?>
+                <a role="button" href="/admin/boxes">New</a>
+                <?=Form::submit('Clone', 'name="action" value="clone"')?>
+                <?=Form::submit('Update', 'name="action" value="update"')?>
+                <?=Form::submit('Delete', 'name="action" value="delete"')?>
+            <?php endif; ?>
         </div>
     </fieldset>
     <?=Form::hidden('boxes.id')?>

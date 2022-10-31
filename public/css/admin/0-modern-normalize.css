@@ -222,7 +222,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-    -appearance: button;
+    appearance: button;
 }
 
 
@@ -290,7 +290,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 [type='search'] {
     /* 1 */
-    -appearance: textfield;
+    appearance: textfield;
     /* 2 */
     outline-offset: -2px;
 }
@@ -301,7 +301,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-search-decoration {
-    -appearance: none;
+    appearance: none;
 }
 
 
@@ -312,7 +312,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 
 ::-webkit-file-upload-button {
     /* 1 */
-    -appearance: button;
+    appearance: button;
     /* 2 */
     font: inherit;
 }

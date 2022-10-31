@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Fastbond</title>
-        <link href="/css/admin.min.css?v=<?=$version?>" rel="stylesheet">
+		<title><?=empty($title)?"$module_name/$controller_name > $action_name":$title?></title>
+        <link href="/css/admin.min.css?v=<?=empty($version)?42:$version?>" rel="stylesheet">
 		<?=Css::inc()?>
 	</head>
 	<body>
@@ -12,7 +12,7 @@
 			<?php View::partial('admin/aside'); ?>
 
 			<main>
-				<h1>Fastbond 0.2</h1>
+				<h1>Fastbond 0.2.1</h1>
 				<?php View::content(); ?>
 			</main>
 		</section>

@@ -13,6 +13,11 @@ textarea,
     padding: 5px 10px;
 }
 
+button,
+[role="button"] {
+    line-height: 38px;
+}
+
 a {
     color: #333;
     display: inline-block;
@@ -75,8 +80,7 @@ h6 {
     margin-top: 0;
 }
 
-label {
-    display: block;
+label>div {
     margin-bottom: 5px;
 }
 
