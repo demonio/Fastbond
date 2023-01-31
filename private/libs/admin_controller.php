@@ -8,7 +8,7 @@ abstract class AdminController extends Controller
     {
         $this->clean = empty($_GET['clean']) ? false : true;
         $this->start_time = microtime(1);
-		$this->version = '22';
+		$this->version = '0.2.2';
 
         Input::isAjax() ? View::template('ajax') : View::template('admin');
     }

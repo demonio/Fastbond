@@ -2,5 +2,10 @@
 $boxes = (new Boxes)->all();
 ?>
 <?php foreach ($boxes as $box): ?>
-    <li><a href="/admin/boxes/<?=$box->id?>"><?=$box->box_name?></a></li>
+    <li>
+        <div class="draggable" data-after="<?=empty($box->code_after)?0:1?>" data-id="<?=$box->id?>">
+            <a href="/admin/boxes/<?=$box->id?>"><?=Ku::icon('pen')?></a>
+            <?=$box->box_name?>
+        </div>
+    </li>
 <?php endforeach; ?>

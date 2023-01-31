@@ -1,3 +1,30 @@
+.draggable {
+    cursor: move;
+}
+
+.sortable {
+    border: 2px dashed #999;
+    display: table;
+    min-height: 48px;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.sortable:after {
+    color: #999;
+    content: "Drop here";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sortable .draggable {
+    height: auto !important;
+}
+
 .gap0 {
     gap: 0;
 }

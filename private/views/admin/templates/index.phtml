@@ -1,0 +1,27 @@
+
+<?=Form::open()?>
+    <fieldset>
+        <legend>Template</legend>
+        <section>
+            <label>
+                <div>Name:</div>
+                <?=Form::input('text', 'templates.template_name')?>
+            </label>
+        </section>
+
+        <label><div>Boxes:</div></label>
+        <div class="sortable"></div>
+
+        <div>
+            <?php if (empty($templates->id)): ?>
+                <?=Form::submit('Create', 'name="action" value="create"')?>
+            <?php else: ?>
+                <a role="button" href="/admin/templates">New</a>
+                <?=Form::submit('Clone', 'name="action" value="clone"')?>
+                <?=Form::submit('Update', 'name="action" value="update"')?>
+                <?=Form::submit('Delete', 'name="action" value="delete"')?>
+            <?php endif; ?>
+        </div>
+    </fieldset>
+    <?=Form::hidden('templates.id')?>
+<?=Form::close()?>

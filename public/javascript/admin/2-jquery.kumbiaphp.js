@@ -97,6 +97,11 @@
             console.log([to, href, this.value]);
         },
 
+        remove: function() {
+            var to = $(this).data('remove');
+            (to == 'parent') ? $(this).parent().remove(): $(to).remove();
+        },
+
         selectAjax: function() {
             var to = $(this).data('ajax');
             var href = $(this).data('href') + this.value;
@@ -133,6 +138,8 @@
             $('body').on('click', '[data-hide]', this.effect('hide'));
 
             $('body').on('keyup', '[data-live]', this.live);
+
+            $('body').on('click', '[data-remove]', this.remove);
 
             $('body').on('click', '[data-show]', this.effect('show'));
 

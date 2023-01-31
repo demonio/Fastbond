@@ -1,17 +1,20 @@
-# Fastbond 0.2.1
+# Fastbond 0.2.2
 Box based CMS for KumbiaPHP
 
-## Requirements
-- You need to set the *_PATH constants in the index.php of /public
-- You need to configure the database in /private/config/databases.php
-- You need to install the KumbiaPHP LiteRecord: https://github.com/KumbiaPHP/ActiveRecord
+## You need
+- Set the *_PATH constants in the index.php of /public
+- Configure the database in /private/config/databases.php
+- Install the KumbiaPHP LiteRecord: https://github.com/KumbiaPHP/ActiveRecord
 
 ### TO DO
 
 ### DOING
-- Testing the CRUD of boxes
+- SAVE boxes in template
 
 ### DONE
 - CRUD of boxes, only the base
+- ADD boxes to template
 
-![Admin of boxes base](https://github.com/demonio/Fastbond/blob/main/public/img/fastbond/boxes.jpg?raw=true)
+![Box from](https://github.com/demonio/Fastbond/blob/main/public/img/fastbond/box_form.jpg?raw=true)
+
+![Boxes in template](https://github.com/demonio/Fastbond/blob/main/public/img/fastbond/boxes_in_template.jpg?raw=true)

@@ -2,7 +2,7 @@
 -- Host:                         localhost
 -- Versión del servidor:         10.4.22-MariaDB - mariadb.org binary distribution
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             12.1.0.6537
+-- HeidiSQL Versión:             12.3.0.6589
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -23,13 +23,17 @@ CREATE TABLE IF NOT EXISTS `boxes` (
   `code_before` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `code_after` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla fastbond.boxes: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla fastbond.boxes: ~6 rows (aproximadamente)
 DELETE FROM `boxes`;
 INSERT INTO `boxes` (`id`, `box_name`, `box_type`, `code_before`, `code_after`) VALUES
 	(2, 'DOCTYPE HTML 5', 'html', '<!DOCTYPE html>', NULL),
-	(4, 'Caja', 'html', 'Código', NULL);
+	(4, 'META charset', 'html', '<meta charset="UTF-8">', NULL),
+	(5, 'HEAD', 'html', '<head>', '</head>'),
+	(6, 'META for mobiles', 'html', '<meta name="viewport" content="width=device-width, initial-scale=1.0">', NULL),
+	(7, 'TITLE', 'html', '<title><?=empty($title)?"$module_name/$controller_name > $action_name":$title?></title>', NULL),
+	(12, 'CSS', 'html', '<link href="/css/admin.min.css?v=<?=empty($version)?42:$version?>" rel="stylesheet">\r\n<?=Css::inc()?>', NULL);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
